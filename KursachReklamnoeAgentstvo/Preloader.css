@@ -1,0 +1,39 @@
+﻿.preloader {
+    position: fixed;
+    left: 5px;
+    top: -30px;
+    right: 17px;
+    bottom: 149px;
+    overflow: hidden;
+    /* фоновый цвет */
+    background: #e0e0e0;
+    z-index: 1001;
+    margin-left: 0px;
+}
+
+.preloader__image { 
+    position: relative;
+    top: -2147483648px;
+    left: 4%;
+    width: 70px;
+    height: 116px;
+    margin-top: -35px;
+    margin-left: -35px;
+    text-align: center;
+    animation: preloader-rotate 2s infinite linear;
+}
+
+@keyframes preloader-rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loaded_hiding .preloader {
+    transition: 0.3s opacity;
+    opacity: 0;
+}
+
+.loaded .preloader {
+    display: none;
+}
