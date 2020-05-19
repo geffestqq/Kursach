@@ -1,5 +1,6 @@
 ﻿using iTextSharp.text;
 using iTextSharp.text.pdf;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -50,17 +51,27 @@ namespace KursachReklamnoeAgentstvo
         protected void Button2_Click(object sender, EventArgs e)
         {
             Response.ClearContent();
-            Response.AppendHeader("content-disposition", "attachment; filename=Employees.xls");
-            Response.ContentType = "application/excel";
-            StringWriter stringWriter = new StringWriter();
-            HtmlTextWriter htw = new HtmlTextWriter(stringWriter);
+            Response.Buffer = true;
+            Response.AddHeader("content-disposition", string.Format("attachment; filename={0}", "Customers.xls"));
+            Response.ContentType = "application/ms-excel";
+            StringWriter sw = new StringWriter();
+            HtmlTextWriter htw = new HtmlTextWriter(sw);
+            gvStatus.AllowPaging = false;
+          //  BindGridview();
+            //Change the Header Row back to white color
             gvStatus.HeaderRow.Style.Add("background-color", "#FFFFFF");
+            //Applying stlye to gridview header cells
+            for (int i = 0; i < gvStatus.HeaderRow.Cells.Count; i++)
+            {
+                gvStatus.HeaderRow.Cells[i].Style.Add("background-color", "#df5015");
+            }
             gvStatus.RenderControl(htw);
-            Response.Write(stringWriter.ToString());
+            Response.Write(sw.ToString());
             Response.End();
         }
+    
 
-        protected void Button3_Click(object sender, EventArgs e)
+            protected void Button3_Click(object sender, EventArgs e)
         {
             BaseFont baseFont = BaseFont.CreateFont(@"C:\Windows\Fonts\arial.ttf", BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
             iTextSharp.text.Font font = new iTextSharp.text.Font(baseFont, iTextSharp.text.Font.DEFAULTSIZE, iTextSharp.text.Font.NORMAL);

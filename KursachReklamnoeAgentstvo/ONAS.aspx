@@ -6,7 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-    <link href="Preloader.css" rel="stylesheet" />
+    <link href="preload.css" rel="stylesheet" />
 </head>
 <body background ="onas.jpg">
     <form id="form1" runat="server">
@@ -49,7 +49,8 @@
         </div>
         <div>
          <center>      
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2254.761065950271!2d37.65037226699723!3d55.588767133911546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414ab21b1c37f5eb%3A0x4de78e56efa5ef57!2z0JHRg9C70LDRgtC90LjQutC-0LLRgdC60LjQuSDQv9GALdC0LCAxMNCRLCDQnNC-0YHQutCy0LAsIDExNzU0Ng!5e0!3m2!1sru!2sru!4v1588979039902!5m2!1sru!2sru" width="800" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" ></iframe>
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18115.07594371845!2d38.24845975246456!3d55.42108760613715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414a9124db965b15%3A0xb8bc2350f7badf5!2z0JHRgNC-0L3QvdC40YbRiywg0JzQvtGB0LrQvtCy0YHQutCw0Y8g0L7QsdC7Lg!5e0!3m2!1sru!2sru!4v1589891836245!5m2!1sru!2sru" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+       
     </center>
             <center>    
                     <a href="MainPage.aspx" style="color:aliceblue">Вернуться на главную</a>

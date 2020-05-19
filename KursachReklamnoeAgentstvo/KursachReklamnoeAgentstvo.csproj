@@ -47,6 +47,9 @@
       <HintPath>..\packages\iTextSharp.5.5.13.1\lib\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\Windows\assembly\GAC_MSIL\Microsoft.SqlServer.ConnectionInfo\14.0.0.0__89845dcd8080cc91\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
@@ -105,10 +108,11 @@
     <Content Include="Klient.aspx" />
     <Content Include="main.js" />
     <Content Include="MainPage.aspx" />
+    <Content Include="Modal.css" />
     <Content Include="obj\3.jpg" />
     <Content Include="onas.jpg" />
     <Content Include="Personal_area.aspx" />
-    <Content Include="Preloader.css" />
+    <Content Include="preload.css" />
     <Content Include="PreloaderGif.css" />
     <Content Include="Price_List.aspx" />
     <Content Include="Registr.aspx" />
@@ -118,6 +122,7 @@
     <Content Include="Sotrudnik.aspx" />
     <Content Include="Sotrudnik_Sobesedovanie.aspx" />
     <Content Include="Status.aspx" />
+    <Content Include="style.css" />
     <Content Include="StyleSheet1.css" />
     <Content Include="StyleSheet2.css" />
     <Content Include="StyleSheet3.css" />

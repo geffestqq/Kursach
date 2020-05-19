@@ -4,6 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <link href="style.css" rel="stylesheet" />
     <link href="StyleSheet2.css" rel="stylesheet" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
@@ -91,8 +92,33 @@
    переходить на сайт.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;  к вашей аудитории&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; и экономии бюджета&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; клиенты, если у вас нет сайта </p>
            
 
-           
+          <br />
+          <br />
+          <br />
+          <br />
+            <br />
+          <br />
+          <br />
+          <br />
         </center>
+                <div class="container">
+	
+	
+	<input id="modal" type="checkbox">
+	<label class="modal-button" for="modal">
+		<i class="fa fa-fire" aria-hidden="true"></i>
+		<span>Новости!</span>
+	</label>
+	<label class="modal-background" for="modal"></label>
+
+	<div class="modal-content">
+		<label class="modal-close" for="modal">&#10005;</label>
+		<h2>Обновления v1.01</h2>
+		<p>• Добавлен контроль версии программного продукта</p>
+		<p>• Добавлена Многопоточность в проверке на адаптивность ПО</p>
+		<label class="modal-content-button" for="modal">OK</label>
+
+	</div> <!-- .modal-content -->
 </form>
 </body>
 </html>

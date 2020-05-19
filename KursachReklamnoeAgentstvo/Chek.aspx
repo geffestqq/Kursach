@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
 </head>
-<link href="Preloader.css" rel="stylesheet" />
+<link href="preload.css" rel="stylesheet" />
 <link href="StyleSheet3.css" rel="stylesheet" />
 <body background ="Back.jpg">
     <form id="form1" runat="server">

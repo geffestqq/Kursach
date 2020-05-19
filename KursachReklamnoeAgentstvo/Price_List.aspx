@@ -6,7 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-    <link href="Preloader.css" rel="stylesheet" />
+    <link href="preload.css" rel="stylesheet" />
 </head>
 <body BackGround="Back.jpg">
     <form id="form1" runat="server">

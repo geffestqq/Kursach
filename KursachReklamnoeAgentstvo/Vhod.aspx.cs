@@ -19,8 +19,11 @@ namespace KursachReklamnoeAgentstvo
                 = new SqlCommand("", DBconnection.connection);
        
         protected void Page_Load(object sender, EventArgs e)
-        {          
-                RegistryKey adobe = Registry.LocalMachine.OpenSubKey("Software").OpenSubKey("Adobe");             
+        {
+
+            int Major = Environment.OSVersion.Version.Major;
+            int Minor = Environment.OSVersion.Version.Minor;
+            RegistryKey adobe = Registry.LocalMachine.OpenSubKey("Software").OpenSubKey("Adobe");             
                 if (adobe != null)
                 {
                     RegistryKey acrobatReader = adobe.OpenSubKey("Acrobat Reader");
@@ -42,7 +45,40 @@ namespace KursachReklamnoeAgentstvo
                     MessageBox.Show("Не установлен Word !", "Рекламное Агенство");
                 }
 
-                Thread thread = new Thread(() =>
+                 frecKey = frecKey.OpenSubKey(
+                 @"HARDWARE\DESCRIPTION\System\CentralProcessor\0", false);
+                Int32 MHz = Convert.ToInt32(frecKey.GetValue("~MHz").ToString());
+                if (MHz < 1333)
+                {
+                    MessageBox.Show("Не хватает тактовой частоты процессора !", "Рекламное Агенство");
+              
+                }
+                long before = GC.GetTotalMemory(false);
+                if (before <1000)
+                {
+                     MessageBox.Show("Не хватает оперативной памяти на компьютере!", "Рекламное Агенство");
+                }
+            
+         
+
+            //foreach (var drive in DriveInfo.GetDrives())
+            //{
+            //    try
+            //    {
+            //        if (drive.AvailableFreeSpace > -1000)
+            //        {
+            //            MessageBox.Show("Не хватает памяти на жестком диске!", "Рекламное Агенство");
+                        
+            //        }
+            //    }
+            //    catch { }
+            //}                      
+
+        
+
+
+
+        Thread thread = new Thread(() =>
                 {
                     try
                     {
@@ -62,10 +98,12 @@ namespace KursachReklamnoeAgentstvo
                 thread.Join();
            
             }
-            protected void btEnter_Click(object sender, EventArgs e)
-            {
 
-                DBprocedure procedures = new DBprocedure();
+     
+
+        protected void btEnter_Click(object sender, EventArgs e)
+            {
+            DBprocedure procedures = new DBprocedure();
                 DBconnection connection = new DBconnection();
                 connection.dbEnter(tbLogin.Text, tbPassword.Text);
                 switch (DBconnection.IDuser)

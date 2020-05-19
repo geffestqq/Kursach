@@ -7,6 +7,7 @@ using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Windows;
 
 namespace KursachReklamnoeAgentstvo
 {
@@ -43,10 +44,16 @@ namespace KursachReklamnoeAgentstvo
         }
         DBprocedure procedures = new DBprocedure();
         protected void Button3_Click(object sender, EventArgs e)
-        {           
-            procedures.spDoljnost_insert(TextBox3.Text.ToString(), Convert.ToDecimal(TextBox4.Text.ToString()));
-            Page_Load(sender, e);
-            gvFill(QR);           
+        {   try
+            {
+                procedures.spDoljnost_insert(TextBox3.Text.ToString(), Convert.ToDecimal(TextBox4.Text.ToString()));
+                Page_Load(sender, e);
+                gvFill(QR);
+            }
+            catch
+            {
+                MessageBox.Show("Некоректный ввод, повторите попытку");
+            }                   
         }
 
         protected void gvDoljnost_RowDataBound(object sender, GridViewRowEventArgs e)
